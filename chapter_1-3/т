@@ -1,0 +1,35 @@
+
+//подключение библиотек реакта
+<script src="https://unpkg.com/react@16/umd/react.
+development.js"></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.
+development.js"></script>
+//подключение компилятора который может работать с JSX
+Здесь вы добавляете ссылку на компилятор для JavaScript Babel
+(babeljs.io)
+//при вызове скрипта нужно прописать
+//type="text/babel" - указывает что с этим может работать babel
+<script type="text/babel" src="1.js">
+
+
+ReactDOM.render
+Метод render принимает два аргумента:
+//этот элемент можно сделать так что
+внутри него будут другие элементы
+1. HTML-подобные элементы (JSX ), которые необходимо вывести.
+2. Место в DOM, где React должна отобразить JSX.
+
+Рекомендуется создать отдельный эле-
+мент, который будет рассматриваться
+ как новый корневой элемент.
+
+ReactDOM.render(
+    <h1>Шерлок</h1>,
+    //можно добавлять так а можно использовать переменную
+    //let destination = document.querySelector("#container");
+      // и тут будеть стоять destination а не
+    document.querySelector("#container")
+
+)
+
+
