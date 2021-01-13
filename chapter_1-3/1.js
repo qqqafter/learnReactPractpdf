@@ -35,8 +35,11 @@ class Buttonify extends React.Component {
     render() {
         return(
             <div>
-                <button type={this.props.behavior}>{this.props.
-                    children}</button>
+                {/*первым свойством можно задать тип напр сабмит
+                   вторым свойством задаем текст кнопки
+                 */}
+                <button type={this.props.behavior}>{this.props.children}
+                </button>
             </div>
         );
     }
@@ -88,4 +91,30 @@ ReactDOM.render(React.createElement(
 
     ),
     //местоположение нового элемента
-    Testdestination);
+    Testdestination
+);
+
+var compTest = document.querySelector("#compTest")
+
+//пример создания класса
+class TestReact extends React.Component{
+    //некоторые методы будут
+    //использованы реактом напрямую
+    render(){
+      return <p>Component React {this.props.CompName}</p>
+    }
+}
+
+ReactDOM.render(
+ <div>
+     <TestReact CompName = "Alice"/>
+     <TestReact CompName = "Bob"/>
+ </div>,
+  document.querySelector("#compTest")
+);
+
+// ReactDOM.render(
+//     <h1>Шерлок</h1>,
+//     //можно добавлять так а можно использовать переменную
+//     document.querySelector("#compTest")
+// )
